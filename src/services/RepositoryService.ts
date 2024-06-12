@@ -10,7 +10,7 @@ export class RepositoryService {
       console.log(response.data)
       return response.data;
     } catch (error) {
-      console.log(error);
+      console.log(error, 'Failed to fetch repositories in service');
       return [];
     }
   }

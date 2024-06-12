@@ -11,7 +11,7 @@ export class UserService {
       console.log(response.data);
       return response.data;
     } catch (error) {
-      console.log(error);
+      console.log(error, 'Failed to fetch users in service');
       return [];
     }
   }
@@ -21,7 +21,7 @@ export class UserService {
       console.log(response.data);
       return response.data;
     } catch (error) {
-      console.log(error);
+      console.log(error, 'Failed to fetch user in service');
     }
   }
 }
