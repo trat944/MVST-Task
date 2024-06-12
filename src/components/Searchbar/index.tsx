@@ -3,7 +3,7 @@ import './searchbar.css'
 
 //change to React Hook Form
 
-interface Props {
+type Props = {
   onSearch: (username: string) => void;
 }
 
@@ -21,7 +21,7 @@ export const SearchBar = ({ onSearch }: Props) => {
         type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-        placeholder="Enter GitHub username"
+        placeholder="Enter a username"
       />
       <button type="submit">Search</button>
     </form>
