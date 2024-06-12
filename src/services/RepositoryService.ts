@@ -1,15 +1,17 @@
 import axios from "axios"
+import { Repository } from "../interfaces/repository";
 
 const { VITE_BASE_URL } = import.meta.env
 
 export class RepositoryService {
-  static async getRepositoriesFromUser(username: string) {
+  static async getRepositoriesFromUser(username: string): Promise<Repository[]> {
     try {
       const response = await axios.get(`${VITE_BASE_URL}/users/${username}/repos`);
       console.log(response.data)
       return response.data;
     } catch (error) {
       console.log(error);
+      return [];
     }
   }
 }
