@@ -1,10 +1,15 @@
 import { useState } from 'react';
-import { useUsers } from '../../hooks/useUsers';
 import './searchbar.css'
 import { useForm } from 'react-hook-form';
+import { User } from '../../interfaces/user';
 
-export const SearchBar = () => {
-  const {users, setUsers} = useUsers();
+type Props = {
+  setUsers: React.Dispatch<React.SetStateAction<User[]>>
+  users: User[]
+  setButtonTrigger: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const SearchBar = ({setUsers, users, setButtonTrigger}: Props) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [searchError, setSearchError] = useState<string | null>(null);
 
@@ -13,15 +18,15 @@ export const SearchBar = () => {
     if (Object.keys(errors).length === 0) {
       const foundUser = users.find(user => data.username === user.login);
       if (foundUser) {
-        console.log(foundUser)
+        setButtonTrigger(true)
         setUsers([foundUser]);
       } else {
         const filteredUsers = users.filter(user => user.login.includes(data.username));
         if (filteredUsers.length > 0) {
-          console.log(filteredUsers)
+          setButtonTrigger(true)
           setUsers(filteredUsers);
         } else {
-          setSearchError('No hay usuarios que coincidan con la búsqueda');
+          setSearchError('No user match');
         }
       }
       reset()

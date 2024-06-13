@@ -1,14 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { UserList } from '../../components/UserList';
-import { useUsers } from '../../hooks/useUsers';
-import './landingPage.css'
 import { UnravelButton } from '../../components/UnravelButton';
 import { SearchBar } from '../../components/Searchbar';
 import { Skeleton } from '../../components/Skeleton';
+import { User } from '../../interfaces/user';
+import { fetchingAndSettingUsers } from '../../utils/fetchingAndSettingUsers';
+import './landingPage.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 
 export const LandingPage = () => {
-  const {users, loading} = useUsers();
-  const [triggerUserDetails, setTriggerUserDetails] = useState<boolean>(false)
+  const [users, setUsers] = useState<User[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [triggerUserDetails, setTriggerUserDetails] = useState<boolean>(false);
+  const [buttonTrigger, setButtonTrigger] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetchingAndSettingUsers(setLoading, setUsers);
+  }, []);
 
   return (
     <>
@@ -16,12 +25,25 @@ export const LandingPage = () => {
         <Skeleton />
       ) : (
         <>
-          {triggerUserDetails ? (
-            <SearchBar />
-          ) : (
-            <UnravelButton setTriggerUserDetails={setTriggerUserDetails} />
+          {triggerUserDetails && !buttonTrigger && (
+          <SearchBar
+            setUsers={setUsers}
+            users={users}
+            setButtonTrigger={setButtonTrigger}
+          />)}
+          
+          {!triggerUserDetails && <UnravelButton
+            setTriggerUserDetails={setTriggerUserDetails}
+          />
+          }
+          {buttonTrigger && (
+            <button className='go-back-button' onClick={() => fetchingAndSettingUsers(setLoading, setUsers, setButtonTrigger)}>
+              <FontAwesomeIcon icon={faRotateLeft} />
+            </button>
           )}
-          <UserList triggerUserDetails={triggerUserDetails} users={users} />
+          <UserList 
+            triggerUserDetails={triggerUserDetails} 
+            users={users} />
         </>
       )}
     </>

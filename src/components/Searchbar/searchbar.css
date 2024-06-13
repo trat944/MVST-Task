@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.go-back-button {
+  margin-right: auto;
+}
+
 .form-container {
   display: flex;
   gap: 1rem;
