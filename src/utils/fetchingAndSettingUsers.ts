@@ -8,7 +8,7 @@ export const fetchingAndSettingUsers = async (
 ) => {
   try {
     setLoading(true);
-    await new Promise(resolve => setTimeout(resolve, 1000)); // Simular delay
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating delay to show skeleton
     const data = await UserService.getUsers();
     setUsers(data);
   } catch (error) {

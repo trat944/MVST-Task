@@ -8,6 +8,7 @@ import { fetchingAndSettingUsers } from '../../utils/fetchingAndSettingUsers';
 import './landingPage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
+import { UserService } from '../../services/UserService';
 
 export const LandingPage = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -15,8 +16,16 @@ export const LandingPage = () => {
   const [triggerUserDetails, setTriggerUserDetails] = useState<boolean>(false);
   const [buttonTrigger, setButtonTrigger] = useState<boolean>(false);
 
+  const ggg = async () => {
+    const users = await UserService.getUsers()
+    console.log(users)
+    const user = await UserService.getSingleUser('mojombo')
+    console.log(user)
+  }
+
   useEffect(() => {
     fetchingAndSettingUsers(setLoading, setUsers);
+    ggg()
   }, []);
 
   return (

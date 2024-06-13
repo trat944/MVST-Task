@@ -10,6 +10,7 @@ export const useUserSpecific = (username: string) => {
     const fetchUser = async () => {
       try {
         setLoading(true);
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating delay to show skeleton
         const data = await UserService.getSingleUser(username);
         if (data) {
           setUser(data);

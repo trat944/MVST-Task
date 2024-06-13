@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './searchbar.css'
 import { useForm } from 'react-hook-form';
 import { User } from '../../interfaces/user';
+import { useNavigate } from 'react-router-dom';
 
 type Props = {
   setUsers: React.Dispatch<React.SetStateAction<User[]>>
@@ -12,14 +13,14 @@ type Props = {
 export const SearchBar = ({setUsers, users, setButtonTrigger}: Props) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [searchError, setSearchError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   //If exact match is found, redirect to the repository page of that person. If several users are found with the input value, show them in the landing page.
   const onSubmit = handleSubmit(async (data) => {
     if (Object.keys(errors).length === 0) {
       const foundUser = users.find(user => data.username === user.login);
       if (foundUser) {
-        setButtonTrigger(true)
-        setUsers([foundUser]);
+        navigate(`/repositories/${foundUser.login}`);
       } else {
         const filteredUsers = users.filter(user => user.login.includes(data.username));
         if (filteredUsers.length > 0) {
