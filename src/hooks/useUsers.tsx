@@ -10,6 +10,8 @@ export const useUsers = () => {
     const fetchUsers = async () => {
       try {
         setLoading(true);
+        //delay the fetch on purpose to show the skeleton
+        await new Promise(resolve => setTimeout(resolve, 1000));
         const data = await UserService.getUsers();
         setUsers(data);
       } catch (error) {

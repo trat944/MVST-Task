@@ -4,13 +4,14 @@ import './userList.css'
 
 interface Props {
   users: User[];
+  triggerUserDetails: boolean
 }
 
-export const UserList = ({ users }: Props) => {
+export const UserList = ({ users, triggerUserDetails }: Props) => {
   return (
-    <div>
+    <div className='users-container'>
       {users.map(user => (
-        <UserItem key={user.id} user={user} />
+        <UserItem triggerUserDetails={triggerUserDetails} key={user.id} user={user} />
       ))}
     </div>
   );

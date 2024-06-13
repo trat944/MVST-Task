@@ -1,0 +1,22 @@
+.unravel-users-button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); 
+}
+
+.unravel-users-button:hover {
+  background-color: #555;
+  transform: translateY(-0.5rem);
+}
+
+.unravel-users-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3); 
+}
