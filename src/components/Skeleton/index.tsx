@@ -7,7 +7,7 @@ export const Skeleton = () => {
     <div className="skeleton-container">
         <div className="skeleton-spinner">
           <FontAwesomeIcon className='loading-icon' icon={faSpinner} />
-          <span>Charging...</span>
+          <span>Loading...</span>
         </div>
     </div>
   );

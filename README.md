@@ -35,6 +35,9 @@ clean code -> separation of components. Functions in utils. Components as small 
 Petitions separated, customHooks to handle those petitions. Try/catch to handle those errors. 
 ->Not necessary for such a small app, but good practices and to show knowledge of services and custom hooks.
 
-possible upgrades -> login of user/authenticate to access data -> handle that user data and authorisation by means of userreducer (type login/logout minimum), and by means of bcrypt and jwt tokens on cookies.
+possible upgrades -> 
+login of user/authenticate to access data ->
+handle that user data and authorisation by means of userreducer (type login/logout minimum), and by means of bcrypt and jwt tokens on cookies.
+When logged user, be possible to follow/unfollow those users fetched. And store those following.
 
 documentation -> use for custom hooks. on for action functions
