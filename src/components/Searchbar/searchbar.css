@@ -1,5 +1,9 @@
 .users-form {
-  margin-top: 1rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.form-container {
   display: flex;
   gap: 1rem;
 }
@@ -13,6 +17,8 @@
   color: #333; 
   font-size: 1rem;
   width: 200px; 
+  font-family: 'Jost', sans-serif;
+  color: white;
 }
 
 .users-form input::placeholder {
@@ -32,4 +38,17 @@
 
 .form-button:hover {
   background-color: #555; 
+}
+
+.error-msg {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  color: red;
+  position: absolute;
+  bottom: 0;
+}
+
+.no-found-user-msg {
+  color: red;
+  font-family: 'Jost', sans-serif;
 }
