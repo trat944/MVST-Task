@@ -31,8 +31,6 @@
   width: 80%;
   max-width: 1300px;
   height: 600px;
-  overflow: auto; 
-  scroll-snap-type: y mandatory; 
   border-radius: 20px;
   padding: 2rem;
   display: flex;
@@ -43,26 +41,8 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
   animation: appearInTheDistance 1s ease-out;
 
-  /* Estilos para la barra de desplazamiento */
+  overflow: auto; 
+  scroll-snap-type: y mandatory; 
   scrollbar-width: thin;
   scrollbar-color: #091B29 #3a6687;
-
-  /* Webkit (Chrome, Safari) */
-  &::-webkit-scrollbar {
-    width: 12px; /* Aumenta el ancho del scrollbar */
-    border-radius: 12px; /* Aumenta el radio de borde del scrollbar */
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 12px; /* Aumenta el radio de borde del track */
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #3a6687;
-    border-radius: 12px; /* Aumenta el radio de borde del thumb */
-  }
-  &::-webkit-scrollbar-corner {
-    display: none; /* Oculta el scrollbar corner */
-  }
 }
