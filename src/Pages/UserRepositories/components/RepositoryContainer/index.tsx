@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Skeleton } from '@components/shared/Skeleton';
-import { RepoList } from './RepoList';
 import { RepoHeader } from './RepoHeader';
 import { RepoSearchbar } from './RepoSearchbar';
 import { useRepos } from '@hooks/useRepositories';
@@ -34,7 +33,6 @@ export const RepositoryContainer = ({ name }: Props) => {
             setRepositoriesShown={setRepositoriesShown}
             languagesOfRepos={languagesOfRepos}
           />
-          <RepoList repos={repositoriesShown} />
         </>
       )}
     </>
