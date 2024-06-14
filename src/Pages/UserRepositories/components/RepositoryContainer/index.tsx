@@ -28,7 +28,7 @@ export const RepositoryContainer = ({name}: Props) => {
       ) : (
         <>
           <RepoHeader repos={repositoriesShown} />
-          <RepoSearchbar />
+          <RepoSearchbar repos={repositoriesShown} />
           <RepoList repos={repositoriesShown} />
         </>
       )}
