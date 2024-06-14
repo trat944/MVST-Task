@@ -3,7 +3,7 @@ import { Repository } from '@interfaces/repository';
 import './repoList.css'
 
 interface Props {
-  repos: Repository[];
+  repos: Repository[]
 }
 
 export const RepoList = ({ repos }: Props) => {

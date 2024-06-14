@@ -4,7 +4,7 @@ import { User } from '@interfaces/user';
 import './userItem.css'
 
 interface Props {
-  user: User;
+  user: User,
   triggerUserDetails: boolean
 }
 

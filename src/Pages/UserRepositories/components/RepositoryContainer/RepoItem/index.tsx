@@ -1,14 +1,24 @@
+import { useEffect, useState } from 'react';
+import { formatDate } from '@utils/getFormattedTime';
 import { Repository } from '@interfaces/repository';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeFork, faSortDown, faStar } from '@fortawesome/free-solid-svg-icons';
 import './repoItem.css'
 
 interface Props {
-  repo: Repository;
+  repo: Repository
 }
-// description , language, visibility, updated_at, forks/forks_count, name
+
 export const RepoItem = ({ repo }: Props) => {
-  console.log(repo)
+  const [formattedTime, setFormattedTime] = useState<string | undefined>(undefined);
+  
+  useEffect(() => {
+    if (repo.updated_at) {
+      const formattedDate = formatDate(new Date(repo.updated_at));
+      setFormattedTime(formattedDate);
+    }
+  }, [repo.updated_at]);
+
   return (
     <div className='repo-item-container'>
       <div className="repo-specifics">
@@ -21,12 +31,12 @@ export const RepoItem = ({ repo }: Props) => {
           {repo.language && <span>{repo.language}</span>}
           <FontAwesomeIcon icon={faCodeFork} />
           <span>{repo.forks}</span>
-          <span>Date updated</span>
+          <span>{formattedTime}</span>
         </div>
       </div>
 
       <div className="star-and-chart">
-        <div className="start-container">
+        <div className="star-container">
           <FontAwesomeIcon icon={faStar} />
           <span>Star</span>
           <FontAwesomeIcon icon={faSortDown} />

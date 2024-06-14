@@ -3,7 +3,7 @@ import { User } from '@interfaces/user';
 import './userList.css'
 
 interface Props {
-  users: User[];
+  users: User[],
   triggerUserDetails: boolean
 }
 

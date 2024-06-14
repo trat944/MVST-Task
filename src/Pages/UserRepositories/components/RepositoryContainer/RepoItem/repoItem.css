@@ -46,3 +46,24 @@
 .repo-language-forks-update svg {
   margin-right: 0.3rem;
 }
+
+.star-container {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 14px;
+  background-color: rgb(59, 59, 59);
+  color: rgb(198, 196, 196);
+  position: relative;
+}
+
+.star-container svg:last-child {
+  font-size: 1rem;
+  padding-bottom: 0.4rem;
+}
+
+.star-container span {
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+}

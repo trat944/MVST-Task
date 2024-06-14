@@ -5,7 +5,7 @@ import { faBookOpen, faCube, faPrint, faTableCellsLarge } from '@fortawesome/fre
 import './repoHeader.css'
 
 interface Props {
-  repos: Repository[];
+  repos: Repository[]
 }
 
 export const RepoHeader = ({ repos }: Props) => {

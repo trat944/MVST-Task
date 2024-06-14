@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { RepositoryService } from '@services/RepositoryService';
 import { Repository } from '@interfaces/repository';
 
+/*Data is fetched and stored in the useState, together with the loading active while fetching the data.
+A timeOut on the promise is established just for showcasing purposes(skeleton)
+*/
+ 
 export const useRepos = (username: string) => {
   const [repositories, setRepositories] = useState<Repository[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

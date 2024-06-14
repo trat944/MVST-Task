@@ -33,7 +33,7 @@ export default {
 
 clean code -> separation of components. Functions in utils. Components as small as possible to test them and reuse them. 
 Petitions separated, customHooks to handle those petitions. Try/catch to handle those errors. 
-->Not necessary for such a small app, but good practices and to show knowledge of services and custom hooks.
+->Not necessary for such a small app, but good practices and to show knowledge of services and custom hooks. Possible reusability if app scales.
 
 possible upgrades -> 
 login of user/authenticate to access data ->

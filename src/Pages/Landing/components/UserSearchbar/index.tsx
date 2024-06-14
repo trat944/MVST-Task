@@ -1,37 +1,24 @@
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useUserSearch } from '@hooks/useUserSearcher';
 import { User } from '@interfaces/user';
 import './userSearchbar.css'
 
 type Props = {
-  setUsers: React.Dispatch<React.SetStateAction<User[]>>
-  users: User[]
+  setUsers: React.Dispatch<React.SetStateAction<User[]>>,
+  users: User[],
   setButtonTrigger: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const UserSearchbar = ({setUsers, users, setButtonTrigger}: Props) => {
-  const [searchError, setSearchError] = useState<string | null>(null);
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
-  const navigate = useNavigate();
+interface FormData {
+  username: string;
+}
 
-  //If exact match is found, redirect to the repository page of that person. If several users are found with the input value, show them in the landing page.
-  const onSubmit = handleSubmit(async (data) => {
-    if (Object.keys(errors).length === 0) {
-      const foundUser = users.find(user => data.username === user.login);
-      if (foundUser) {
-        navigate(`/repositories/${foundUser.login}`);
-      } else {
-        const filteredUsers = users.filter(user => user.login.includes(data.username));
-        if (filteredUsers.length > 0) {
-          setButtonTrigger(true)
-          setUsers(filteredUsers);
-        } else {
-          setSearchError('No user match');
-        }
-      }
-      reset()
-    }
+export const UserSearchbar = ({setUsers, users, setButtonTrigger}: Props) => {
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
+  const { handleUserSearch, searchError } = useUserSearch({ users, setUsers, setButtonTrigger });
+
+  const onSubmit = handleSubmit((data) => {
+    handleUserSearch(data, reset);
   });
 
   return (
