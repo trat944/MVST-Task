@@ -11,7 +11,6 @@ interface Props {
 
 export const RepoItem = ({ repo }: Props) => {
   const [formattedTime, setFormattedTime] = useState<string | undefined>(undefined);
-  console.log(repo)
   useEffect(() => {
     if (repo.updated_at) {
       const formattedDate = formatDate(new Date(repo.updated_at));

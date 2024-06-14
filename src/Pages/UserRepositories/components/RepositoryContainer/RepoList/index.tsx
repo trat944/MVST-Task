@@ -7,6 +7,10 @@ interface Props {
 }
 
 export const RepoList = ({ repos }: Props) => {
+  if (!repos) {
+    return null; 
+  }
+  
   return (
     <div>
       {repos.map(repo => (

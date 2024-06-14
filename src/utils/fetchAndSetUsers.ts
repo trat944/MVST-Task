@@ -8,7 +8,7 @@ import { User } from "../interfaces/user";
   Finally, a setTimeout on the promise is established just for showcasing purposes to show the skeleton when loading and fetching the data.
 */
 
-export const fetchingAndSettingUsers = async (
+export const fetchAndSetUsers = async (
   setLoading: React.Dispatch<React.SetStateAction<boolean>>,
   setUsers: React.Dispatch<React.SetStateAction<User[]>>,
   setButtonTrigger?: React.Dispatch<React.SetStateAction<boolean>>

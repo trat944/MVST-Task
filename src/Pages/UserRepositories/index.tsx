@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { RepositoryContainer } from "./components/RepositoryContainer";
 import { ProfileInfoContainer } from "./components/ProfileInfoContainer";
-import './repositoryPage.css'
+import './userRepositories.css'
 
 export const RepositoryPage = () => {
   const { name } = useParams<{ name: string }>();

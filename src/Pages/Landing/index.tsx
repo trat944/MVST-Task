@@ -3,7 +3,7 @@ import { Skeleton } from '@components/shared/Skeleton';
 import { UserList } from './components/UserList';
 import { UnravelButton } from './components/UnravelButton';
 import { UserSearchbar } from './components/UserSearchbar';
-import { fetchingAndSettingUsers } from '@utils/fetchingAndSettingUsers';
+import { fetchAndSetUsers } from '@utils/fetchAndSetUsers';
 import { User } from '@interfaces/user';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
@@ -16,7 +16,7 @@ export const LandingPage = () => {
   const [buttonTrigger, setButtonTrigger] = useState<boolean>(false);
 
   useEffect(() => {
-    fetchingAndSettingUsers(setLoading, setUsers);
+    fetchAndSetUsers(setLoading, setUsers);
   }, []);
 
   return (
@@ -37,7 +37,7 @@ export const LandingPage = () => {
           />
           }
           {buttonTrigger && (
-            <button className='back-button' onClick={() => fetchingAndSettingUsers(setLoading, setUsers, setButtonTrigger)}>
+            <button className='back-button' onClick={() => fetchAndSetUsers(setLoading, setUsers, setButtonTrigger)}>
               <FontAwesomeIcon icon={faRotateLeft} />
             </button>
           )}
