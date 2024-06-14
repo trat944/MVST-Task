@@ -41,3 +41,9 @@ handle that user data and authorisation by means of userreducer (type login/logo
 When logged user, be possible to follow/unfollow those users fetched. And store those following.
 
 documentation -> use for custom hooks. on for action functions
+
+importaciones -> react/libraries, shared components, components, services, hooks, utils, interfaces, icons
+importaciones clikables-> setting routes in ts.config.json and adding aliases in vite.config.ts
+
+importacion dentro de componente -> same rule as importaciones, primero  importaciones react, luego de librerias, luego de custom hooks.
+meter video

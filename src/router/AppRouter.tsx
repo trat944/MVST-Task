@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { LandingPage } from '../Pages/LandingPage';
-import { Layout } from '../components/Layout';
-import { RepositoryPage } from '../Pages/RepositoryPage';
+import { LandingPage } from '../Pages/Landing';
+import { Layout } from '../components/layout';
+import { RepositoryPage } from '../Pages/UserRepositories';
 
 export const AppRouter = () => {
 

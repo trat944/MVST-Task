@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { RepositoryService } from '../services/RepositoryService';
-import { Repository } from '../interfaces/repository';
+import { RepositoryService } from '@services/RepositoryService';
+import { Repository } from '@interfaces/repository';
 
 export const useRepos = (username: string) => {
   const [repositories, setRepositories] = useState<Repository[]>([]);

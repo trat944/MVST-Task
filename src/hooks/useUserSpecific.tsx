@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { UserService } from '../services/UserService';
-import { UserSpecific } from '../interfaces/userSpecific';
+import { UserService } from '@services/UserService';
+import { UserSpecific } from '@interfaces/userSpecific';
 
 export const useUserSpecific = (username: string) => {
   const [user, setUser] = useState<UserSpecific>();
