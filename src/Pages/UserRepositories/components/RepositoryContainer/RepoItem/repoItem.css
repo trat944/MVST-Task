@@ -67,3 +67,9 @@
   font-family: Jost, sans-serif;
   font-weight: 500;
 }
+
+@media (max-width: 650px) {
+  .repo-item-container {
+    flex-wrap: wrap;
+  }
+}

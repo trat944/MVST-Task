@@ -29,3 +29,9 @@
 .header-divider {
   margin: 0;
 }
+
+@media (max-width: 650px) {
+  .repo-header-container span {
+    font-size: 0.8rem;
+  }
+}

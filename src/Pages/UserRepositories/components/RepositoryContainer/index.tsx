@@ -12,7 +12,7 @@ type Props = {
   name: string | undefined
 }
 
-export const RepositoryContainer = ({name}: Props) => {
+export const RepositoryContainer = ({ name }: Props) => {
   const [languagesOfRepos, setLanguagesOfRepos] = useState<string[]>([]);
   const { repositories, loading } = useRepos(name || '');
   const [repositoriesShown, setRepositoriesShown] = useState<Repository[]>([]);
@@ -29,12 +29,12 @@ export const RepositoryContainer = ({name}: Props) => {
       ) : (
         <>
           <RepoHeader repos={repositories} />
-          <RepoSearchbar 
-            repos={repositories} 
-            setRepositoriesShown={setRepositoriesShown} 
-            languagesOfRepos={languagesOfRepos} 
-            repositoriesShown={repositoriesShown} />
-          <RepoList repos={repositoriesShown} /> 
+          <RepoSearchbar
+            repos={repositories}
+            setRepositoriesShown={setRepositoriesShown}
+            languagesOfRepos={languagesOfRepos}
+          />
+          <RepoList repos={repositoriesShown} />
         </>
       )}
     </>

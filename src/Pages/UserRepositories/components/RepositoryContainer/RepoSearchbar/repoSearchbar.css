@@ -62,3 +62,12 @@
   color: red;
   font-family: 'Jost', sans-serif;
 }
+
+@media (max-width: 600px) {
+  .filter-container {
+    flex-wrap: wrap;
+  }
+  .users-form {
+    padding-bottom: 0;
+  }
+}

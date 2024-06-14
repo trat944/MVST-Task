@@ -16,3 +16,18 @@
   padding: 1rem;
   margin-right: 1rem;
 }
+
+@media (max-width: 900px) {
+  .repository-page-container {
+    flex-direction: column; 
+    justify-content: center;
+  }
+  .profile-info-container {
+    width: 100%;
+    margin: auto;
+  }
+  .repository-container {
+    width: 100%;
+    padding: 0;
+}
+}

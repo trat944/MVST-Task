@@ -10,7 +10,7 @@ type Props = {
   repos: Repository[],
   languagesOfRepos: string[],
   setRepositoriesShown: React.Dispatch<React.SetStateAction<Repository[]>>,
-  repositoriesShown: Repository[]
+
 }
 
 export const RepoSearchbar: React.FC<Props> = ({ repos, languagesOfRepos, setRepositoriesShown }) => {
@@ -30,9 +30,10 @@ export const RepoSearchbar: React.FC<Props> = ({ repos, languagesOfRepos, setRep
     reset();
   };
 
+  //Show all repos when search is initialised again
   const resetSearchTerm = () => {
     setSearchTerm('');
-    setRepositoriesShown(filteredRepos);
+    setRepositoriesShown(repos); 
   };
 
   const onLanguageChange = (language: string) => {
