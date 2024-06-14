@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { UserList } from '../../components/UserList';
-import { UnravelButton } from '../../components/UnravelButton';
-import { SearchBar } from '../../components/Searchbar';
+import { UserList } from './UserList';
+import { UnravelButton } from './UnravelButton';
+import { UserSearchbar } from './UserSearchbar';
 import { Skeleton } from '../../components/Skeleton';
 import { User } from '../../interfaces/user';
 import { fetchingAndSettingUsers } from '../../utils/fetchingAndSettingUsers';
@@ -26,7 +26,7 @@ export const LandingPage = () => {
       ) : (
         <>
           {triggerUserDetails && !buttonTrigger && (
-          <SearchBar
+          <UserSearchbar
             setUsers={setUsers}
             users={users}
             setButtonTrigger={setButtonTrigger}

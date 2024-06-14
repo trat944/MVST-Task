@@ -1,4 +1,4 @@
-import { User } from '../../interfaces/user';
+import { User } from '../../../interfaces/user';
 import { UserItem } from '../UserItem';
 import './userList.css'
 

@@ -1,6 +1,6 @@
 import { Skeleton } from '../../../components/Skeleton';
 import { useUserSpecific } from '../../../hooks/useUserSpecific';
-import { UserSpecificItem } from '../../../components/UserSpecificItem';
+import { UserSpecificItem } from './UserSpecificItem';
 import './profileInfoContainer.css'
 
 type Props = {

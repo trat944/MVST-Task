@@ -16,8 +16,7 @@ export const Header = () => {
         <img className='logo' src="src/assets/logo.png" alt="Logo" />
       </div>
       <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
-        <a>Home</a>
-        <a>Users</a>
+        <a href='/'>Home</a>
         <a>Repositories</a>
         <a>About Us</a>
         <a>Contact</a>

@@ -11,7 +11,7 @@ export const UserSpecificItem = ({ user }: Props) => {
   return (
     <div className="user-container">
       <img className='avatar-img' src={user?.avatar_url} alt="" />
-      <h2 className='user-name'>{user?.name}</h2>
+      <h2 className='userName'>{user?.name}</h2>
       <span className='user-login'>{user?.login}</span>
       {user?.bio !== null && <span>{user?.bio}</span>}
       {user?.company !== null && <span>{user?.company}</span>}

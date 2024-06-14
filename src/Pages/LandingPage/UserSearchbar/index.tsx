@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './searchbar.css'
+import './userSearchbar.css'
 import { useForm } from 'react-hook-form';
-import { User } from '../../interfaces/user';
+import { User } from '../../../interfaces/user';
 import { useNavigate } from 'react-router-dom';
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   setButtonTrigger: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const SearchBar = ({setUsers, users, setButtonTrigger}: Props) => {
+export const UserSearchbar = ({setUsers, users, setButtonTrigger}: Props) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
   const [searchError, setSearchError] = useState<string | null>(null);
   const navigate = useNavigate();
