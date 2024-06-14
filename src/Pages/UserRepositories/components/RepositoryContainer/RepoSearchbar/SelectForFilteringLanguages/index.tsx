@@ -1,4 +1,4 @@
-import './filterByLanguageSelect.css'
+import './selectForFilteringLanguages.css'
 
 type Props = {
   languagesOfRepos: string[];
@@ -6,7 +6,7 @@ type Props = {
   onChange: (language: string) => void;
 }
 
-export const LanguageFilterSelect = ({ languagesOfRepos, selectedLanguage, onChange }: Props) => {
+export const SelectForFilteringLanguages = ({ languagesOfRepos, selectedLanguage, onChange }: Props) => {
   return (
     <div className="language-dropdown">
       <select value={selectedLanguage} onChange={(e) => onChange(e.target.value)}>

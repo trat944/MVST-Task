@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { RepoList } from '../RepoList';
-import { LanguageFilterSelect } from './FilterByLanguageSelect';
+import { SelectForFilteringLanguages } from './SelectForFilteringLanguages';
 import {useRepoFilter} from '@hooks/useRepoFilterByLanguage';
 import { Repository } from '@interfaces/repository';
 import './repoSearchbar.css'
@@ -72,11 +72,10 @@ export const RepoSearchbar: React.FC<Props> = ({ repos, languagesOfRepos, setRep
             />
             <button type="submit">Search</button>
           </div>
-          {/* {errors.repository && <span className='error-msg'>{errors.repository.message}</span>} */}
           {searchError && <span className='no-found-repository-msg'>{searchError}</span>}
         </form>
 
-        <LanguageFilterSelect
+        <SelectForFilteringLanguages
           languagesOfRepos={languagesOfRepos}
           selectedLanguage={selectedLanguage}
           onChange={onLanguageChange}

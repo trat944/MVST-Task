@@ -58,9 +58,10 @@
   bottom: 0;
 }
 
-.no-found-user-msg {
+.no-found-repository-msg {
   color: red;
   font-family: 'Jost', sans-serif;
+  position: absolute;
 }
 
 @media (max-width: 600px) {

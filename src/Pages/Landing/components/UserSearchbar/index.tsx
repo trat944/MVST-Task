@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { useUserSearch } from '@hooks/useUserSearcher';
+import { useUserSearch } from '@hooks/useUserSearch';
 import { User } from '@interfaces/user';
 import './userSearchbar.css'
 
