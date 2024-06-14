@@ -1,49 +1,85 @@
-# React + TypeScript + Vite
+# Project Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to GitHub Explorer! This web application is crafted with the purpose of exploring GitHub user repositories in an engaging and interactive manner. Leveraging the Official GitHub API, GitHub Explorer provides a seamless experience for discovering and browsing repositories.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-ç
+GitHub Explorer has been imbued with a playful and detective-like aura to enhance user interaction. Upon landing on the homepage, users are greeted with a curated list of anonymous profiles. To reveal the hidden identities and explore further details, users must click on a button, adding an element of discovery and intrigue to the browsing experience.
 
 
-clean code -> separation of components. Functions in utils. Components as small as possible to test them and reuse them. 
-Petitions separated, customHooks to handle those petitions. Try/catch to handle those errors. 
-->Not necessary for such a small app, but good practices and to show knowledge of services and custom hooks. Possible reusability if app scales.
+## 🛠️ Installation
 
-possible upgrades -> 
-login of user/authenticate to access data ->
-handle that user data and authorisation by means of userreducer (type login/logout minimum), and by means of bcrypt and jwt tokens on cookies.
-When logged user, be possible to follow/unfollow those users fetched. And store those following.
+To get started with Blend Beyond, follow these steps:
 
-documentation -> use for custom hooks. on for action functions
+1. Clone the repository:
+  git clone https://github.com/your-username/MVST-Task.git
 
-importaciones -> react/libraries, shared components, components, services, hooks, utils, interfaces, icons
-importaciones clikables-> setting routes in ts.config.json and adding aliases in vite.config.ts
+2. Navigate to the project directory:
+  cd MVST-Task
 
-importacion dentro de componente -> same rule as importaciones, primero  importaciones react, luego de librerias, luego de custom hooks.
-meter video
+3. Install dependencies:
+  pnpm install (npm, yarn...)
+
+4. Run the server:
+  pnpm dev (npm, yarn...)
+
+
+## 💻 **Technologies Used**
+
+### Frontend:
+- **React.js**: Used for building the user interface with component-based architecture.
+- **React Router DOM**: Handles navigation and routing within the React application.
+- **React Hook Form**: Manages forms in React with easy-to-use hooks for validation.
+- **FontAwesome (react-fontawesome)**: Provides a library of icons used for visual elements.
+- **React Confetti**: Adds a fun visual effect like confetti for celebrations or user interactions.
+
+### API Handling:
+- **Axios**: Used for making HTTP requests to interact with the GitHub API for fetching data.
+
+### Date Management:
+- **date-fns**: Provides date utility functions for manipulating and formatting dates in the application.
+
+### Environment Variables:
+- **dotenv**: Manages environment variables to keep sensitive information separate from the codebase.
+
+### Development Tools:
+- **TypeScript**: Used to add static types to JavaScript for improved development experience and code reliability.
+- **Vite (development server)**: Provides a fast development server that supports modern JavaScript features and quick refresh times during development.
+
+
+## 🌈 **Future Enhancements**
+
+As GitHub Explorer continues to evolve, potential upgrades include:
+
+- **User Authentication:** Implement secure login and authentication using bcrypt and JWT tokens. Handle user data and authorization through a `userReducer`, supporting functionalities like login/logout and utilizing JWT tokens stored in cookies.
+
+- **User Interaction:** Enable users to follow/unfollow profiles and save preferences. Once logged in, users should have the ability to interact with fetched profiles, follow or unfollow them, and manage their list of followed profiles.
+
+
+## 📝 Documentation and Good Practices
+
+### Naming Conventions
+- **Custom Hooks:** Use camelCase for custom hooks.
+- **Component Folders:** Initial capital letter for component folders and names.
+- **Action Functions:** Use camelCase for action functions.
+
+### Import Order
+- **File Imports:** Organize imports in the following order:
+  1. React imports
+  2. Libraries imports
+  3. Shared components imports
+  4. Components imports
+  5. Services imports
+  6. Hooks imports
+  7. Utils imports
+  8. Interfaces imports
+  9. Icons imports
+
+### Component-Specific Imports
+- **Component Imports:** Follow the same import order as above within individual components.
+
+### Clickable Imports
+- **Setting Routes:** Configure routes in `ts.config.json` and add aliases in `vite.config.ts` for cleaner imports (`@` instead of `../../../`).
+
+### Clean Code Practices
+- **Separation of Concerns:** Separate components, functions in utils, and keep components as small as possible for easier testing and reusability.
+- **API Requests:** Keep API requests separated, use custom hooks to handle them, and implement error handling with try/catch blocks.
+- **Good Practices:** While not necessary for a small app, these practices demonstrate familiarity with services and custom hooks, ensuring scalability and reusability in larger applications.
