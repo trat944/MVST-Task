@@ -17,11 +17,11 @@ export const useUserSearch = ({ users, setUsers, setButtonTrigger }: UseUserSear
   If no user is found, set the searchError to 'No user match'
   */
   const handleUserSearch = async (data: { username: string }, reset: () => void) => {
-    const foundUser = users.find(user => data.username === user.login);
+    const foundUser = users.find(user => data.username.toLowerCase() === user.login.toLowerCase());
     if (foundUser) {
       navigate(`/repositories/${foundUser.login}`);
     } else {
-      const filteredUsers = users.filter(user => user.login.includes(data.username));
+      const filteredUsers = users.filter(user => user.login.includes(data.username.toLowerCase()));
       if (filteredUsers.length > 0) {
         setButtonTrigger(true);
         setUsers(filteredUsers);
