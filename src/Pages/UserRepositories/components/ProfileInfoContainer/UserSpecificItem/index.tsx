@@ -10,7 +10,7 @@ interface Props {
 export const UserSpecificItem = ({ user }: Props) => {
   return (
     <div className="user-container">
-      <img className='avatar-img' src={user?.avatar_url} alt="" />
+      <img className='avatar-img' src={user?.avatar_url} alt="User image" />
       <h2 className='userName'>{user?.name}</h2>
       <span className='user-login'>{user?.login}</span>
       {user?.bio !== null && <span>{user?.bio}</span>}

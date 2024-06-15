@@ -1,4 +1,6 @@
 import type { Config } from '@jest/types';
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { compilerOptions } from './tsconfig.json';
 
 const config: Config.InitialOptions = {
   testEnvironment: 'jsdom',
@@ -8,15 +10,13 @@ const config: Config.InitialOptions = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testMatch: ['**/__tests__/**/*.(test|spec).ts?(x)'],
-  moduleNameMapper: {
-    '^@interfaces/(.*)$': '<rootDir>/src/interfaces/$1',
-    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
-    '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
-    '^@components/(.*)$': '<rootDir>/src/components/$1',
-    '^@services/(.*)$': '<rootDir>/src/services/$1'
-  },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
+  transformIgnorePatterns: [
+    "node_modules/(?!(@babel/preset-react)/)" // Incluye el preset de react en la transformación
+  ],
 };
 
 export default config;
+
 
 

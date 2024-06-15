@@ -1,85 +1,103 @@
-# Project Description
+# GitHub Explorer
 
-Welcome to GitHub Explorer! This web application is crafted with the purpose of exploring GitHub user repositories in an engaging and interactive manner. Leveraging the Official GitHub API, GitHub Explorer provides a seamless experience for discovering and browsing repositories.
+Welcome to **GitHub Explorer**! This web application is designed to provide an engaging and interactive way to explore GitHub user repositories. Leveraging the Official GitHub API, GitHub Explorer offers a seamless experience for discovering and browsing repositories with a playful and detective-like aura.
 
-GitHub Explorer has been imbued with a playful and detective-like aura to enhance user interaction. Upon landing on the homepage, users are greeted with a curated list of anonymous profiles. To reveal the hidden identities and explore further details, users must click on a button, adding an element of discovery and intrigue to the browsing experience.
+Upon landing on the homepage, users are greeted with a curated list of anonymous profiles. To reveal the hidden identities and explore further details, users must click on a button, adding an element of discovery and intrigue to the browsing experience.
 
+<div style="display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+    <img src="/src/assets/repo_pictures/repo_picture (1).png" alt="Image 1" style="width: 45%; margin: 5px;">
+    <img src="/src/assets/repo_pictures/repo_picture (2).png" alt="Image 2" style="width: 45%; margin: 5px;">
+    <img src="/src/assets/repo_pictures/repo_picture (4).png" alt="Image 3" style="width: 45%; margin: 5px;">
+    <img src="/src/assets/repo_pictures/repo_picture (3).png" alt="Image 4" style="width: 45%; margin: 5px;">
+</div>
 
-## 🛠️ Installation
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <video width="45%" controls style="margin: 5px;">
+        <source src="/src/assets/repo_videos/demo_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video width="45%" controls style="margin: 5px;">
+        <source src="/src/assets/repo_videos/archit_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
-To get started with Blend Beyond, follow these steps:
+## 🚀 Getting Started
 
-1. Clone the repository:
-  git clone https://github.com/your-username/MVST-Task.git
+To get started with GitHub Explorer, follow these steps:
 
-2. Navigate to the project directory:
-  cd MVST-Task
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/MVST-Task.git
+    ```
+2. **Navigate to the project directory:**
+    ```bash
+    cd MVST-Task
+    ```
+3. **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
+4. **Run the development server:**
+    ```bash
+    pnpm dev
+    ```
 
-3. Install dependencies:
-  pnpm install (npm, yarn...)
-
-4. Run the server:
-  pnpm dev (npm, yarn...)
-
-
-## 💻 **Technologies Used**
+## 💻 Technologies Used
 
 ### Frontend:
-- **React.js**: Used for building the user interface with component-based architecture.
-- **React Router DOM**: Handles navigation and routing within the React application.
-- **React Hook Form**: Manages forms in React with easy-to-use hooks for validation.
-- **FontAwesome (react-fontawesome)**: Provides a library of icons used for visual elements.
-- **React Confetti**: Adds a fun visual effect like confetti for celebrations or user interactions.
+- **[React.js](https://reactjs.org/)**: Building user interfaces with component-based architecture.
+- **[React Router DOM](https://reactrouter.com/)**: Navigation and routing within the React application.
+- **[React Hook Form](https://react-hook-form.com/)**: Managing forms with easy-to-use hooks for validation.
+- **[FontAwesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react)**: Library of icons for visual elements.
+- **[React Confetti](https://www.npmjs.com/package/react-confetti)**: Fun visual effect for celebrations or interactions.
 
 ### API Handling:
-- **Axios**: Used for making HTTP requests to interact with the GitHub API for fetching data.
+- **[Axios](https://axios-http.com/)**: Making HTTP requests to interact with the GitHub API for fetching data.
 
 ### Date Management:
-- **date-fns**: Provides date utility functions for manipulating and formatting dates in the application.
+- **[date-fns](https://date-fns.org/)**: Utility functions for manipulating and formatting dates.
 
 ### Environment Variables:
-- **dotenv**: Manages environment variables to keep sensitive information separate from the codebase.
+- **[dotenv](https://www.npmjs.com/package/dotenv)**: Managing environment variables to keep sensitive information separate.
 
 ### Development Tools:
-- **TypeScript**: Used to add static types to JavaScript for improved development experience and code reliability.
-- **Vite (development server)**: Provides a fast development server that supports modern JavaScript features and quick refresh times during development.
+- **[TypeScript](https://www.typescriptlang.org/)**: Adding static types to JavaScript for improved development experience and code reliability.
+- **[Vite](https://vitejs.dev/)**: Fast development server supporting modern JavaScript features and quick refresh times.
 
-
-## 🌈 **Future Enhancements**
+## 🌈 Future Enhancements
 
 As GitHub Explorer continues to evolve, potential upgrades include:
 
 - **User Authentication:** Implement secure login and authentication using bcrypt and JWT tokens. Handle user data and authorization through a `userReducer`, supporting functionalities like login/logout and utilizing JWT tokens stored in cookies.
 
-- **User Interaction:** Enable users to follow/unfollow profiles and save preferences. Once logged in, users should have the ability to interact with fetched profiles, follow or unfollow them, and manage their list of followed profiles.
+- **User Interaction:** Enable users to follow/unfollow profiles and save preferences. Logged-in users should be able to interact with profiles, follow/unfollow them, and manage their list of followed profiles.
 
-
-## 📝 Documentation and Good Practices
+## 📝 Documentation and Best Practices
 
 ### Naming Conventions
-- **Custom Hooks:** Use camelCase for custom hooks.
-- **Component Folders:** Initial capital letter for component folders and names.
-- **Action Functions:** Use camelCase for action functions.
+- **Custom Hooks:** Use camelCase.
+- **Component Folders:** Start with an initial capital letter.
+- **Action Functions:** Use camelCase.
 
 ### Import Order
-- **File Imports:** Organize imports in the following order:
-  1. React imports
-  2. Libraries imports
-  3. Shared components imports
-  4. Components imports
-  5. Services imports
-  6. Hooks imports
-  7. Utils imports
-  8. Interfaces imports
-  9. Icons imports
+1. **React imports**
+2. **Library imports**
+3. **Shared component imports**
+4. **Component imports**
+5. **Service imports**
+6. **Hook imports**
+7. **Util imports**
+8. **Interface imports**
+9. **Icon imports**
 
 ### Component-Specific Imports
-- **Component Imports:** Follow the same import order as above within individual components.
+- Follow the same import order within individual components.
 
 ### Clickable Imports
-- **Setting Routes:** Configure routes in `ts.config.json` and add aliases in `vite.config.ts` for cleaner imports (`@` instead of `../../../`).
+- Configure routes in `ts.config.json` and add aliases in `vite.config.ts` for cleaner imports (e.g., `@` instead of `../../../`).
 
 ### Clean Code Practices
-- **Separation of Concerns:** Separate components, functions in utils, and keep components as small as possible for easier testing and reusability.
+- **Separation of Concerns:** Separate components, functions in utils, and keep components small for easier testing and reusability.
 - **API Requests:** Keep API requests separated, use custom hooks to handle them, and implement error handling with try/catch blocks.
-- **Good Practices:** While not necessary for a small app, these practices demonstrate familiarity with services and custom hooks, ensuring scalability and reusability in larger applications.
+- **Best Practices:** Demonstrate familiarity with services and custom hooks, ensuring scalability and reusability in larger applications.

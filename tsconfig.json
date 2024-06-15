@@ -24,8 +24,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["@types/jest", "@types/testing-library__jest-dom"]
+    "typeRoots": ["./node_modules/@types", "../node_modules/@types", "../node_modules/@testing-library"],
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": ["src", "vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
+
+
+

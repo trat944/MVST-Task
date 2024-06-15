@@ -49,6 +49,7 @@ export const RepoSearchbar: React.FC<Props> = ({ repos, languagesOfRepos, setRep
   };
 
   const onLanguageChange = (language: string) => {
+    setSearchError(null);
     handleChangeLanguage(language, resetSearchTerm);
   };
 

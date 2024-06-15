@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <nav className="header">
       <div className="navbar-logo">
-        <img className='logo' src="src/assets/logo.png" alt="Logo" />
+        <img className='logo' src="src/assets/logo.png" alt="Github Premium Logo" />
       </div>
       <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
         <a href='/'>Home</a>
