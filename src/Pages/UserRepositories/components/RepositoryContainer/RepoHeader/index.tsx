@@ -10,6 +10,7 @@ interface Props {
 
 export const RepoHeader = ({ repos }: Props) => {
   const [reposNumber, setReposNumber] = useState(0)
+  console.log(repos)
 
   useEffect(() => {
     const calculateRepoNumber = () => {

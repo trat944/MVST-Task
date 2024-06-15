@@ -8,6 +8,7 @@ interface Props {
 }
 
 export const UserSpecificItem = ({ user }: Props) => {
+  console.log(user)
   return (
     <div className="user-container">
       <img className='avatar-img' src={user?.avatar_url} alt="User image" />

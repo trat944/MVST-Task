@@ -3,7 +3,7 @@ export interface UserSpecific {
   bio:                 null;
   blog:                string;
   company:             string;
-  created_at:          Date;
+  created_at:          string;
   email:               null;
   events_url:          string;
   followers:           number;
@@ -29,6 +29,6 @@ export interface UserSpecific {
   subscriptions_url:   string;
   twitter_username:    string;
   type:                string;
-  updated_at:          Date;
+  updated_at:          string;
   url:                 string;
 }
