@@ -11,16 +11,10 @@ Upon landing on the homepage, users are greeted with a curated list of anonymous
     <img src="/src/assets/repo_pictures/repo_picture (3).png" alt="Image 4" style="width: 45%; margin: 5px;">
 </div>
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <video width="45%" controls style="margin: 5px;">
-        <source src="/src/assets/repo_videos/demo_video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <video width="45%" controls style="margin: 5px;">
-        <source src="/src/assets/repo_videos/archit_video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+## Watch the Videos
+
+- [Click here to watch a demo](https://drive.google.com/file/d/13PSzdFXJ14IiBuW-C7zZA1ZeFDkDxRYW/view?usp=drive_link)
+- [Click here to watch an overview of the project's architecture](https://drive.google.com/file/d/14Sbyv2Ztf2crcJPT8H_2frHbPEA-YeS-/view?usp=drive_link)
 
 ## 🚀 Getting Started
 
