@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-import { RepoHeader } from '.';
+import { RepoItem } from '.';
 import { Repository } from '@interfaces/repository';
 
-const mockRepos: Repository[] = [
+const mockRepo: Repository = 
   {
     allow_forking: true,
     archive_url: "https://api.github.com/repos/wycats/abbot-from-scratch/{archive_format}{/ref}",
@@ -94,11 +94,10 @@ const mockRepos: Repository[] = [
     watchers_count: 9,
     web_commit_signoff_required: false,
   }
-]
 
-const meta: Meta<typeof RepoHeader> = {
-  title: 'UserRepositories/RepositoryContainer/RepoHeader',
-  component: RepoHeader,
+const meta: Meta<typeof RepoItem> = {
+  title: 'UserRepositories/RepositoryContainer/RepoItem',
+  component: RepoItem,
   decorators: [
     (Story) => (
       <BrowserRouter>
@@ -109,10 +108,10 @@ const meta: Meta<typeof RepoHeader> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof RepoHeader>;
+type Story = StoryObj<typeof RepoItem>;
 
 export const Default: Story = {
   args: {
-    repos: mockRepos,
+    repo: mockRepo,
   },
 };

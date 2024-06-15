@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
-
 import { UserSpecificItem } from '.';
 import { UserSpecific } from '@interfaces/userSpecific';
 
-const mockUser: UserSpecific = {
+const mockUserSpecific: UserSpecific = {
   id: 4,
   login: 'wycats',
   avatar_url: 'https://avatars.githubusercontent.com/u/4?v=4',
@@ -56,6 +55,6 @@ type Story = StoryObj<typeof UserSpecificItem>;
 
 export const Default: Story = {
   args: {
-    user: mockUser,
+    user: mockUserSpecific,
   },
 };

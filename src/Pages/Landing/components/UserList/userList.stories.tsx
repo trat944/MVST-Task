@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { UserList } from '.';
 import { User } from '@interfaces/user';
 
-
 const mockUsers: User[] = [
   {
     id: 1,

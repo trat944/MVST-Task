@@ -7,7 +7,7 @@
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
       "@components/*": ["components/*"],
-      "@services/*": ["services/*"]
+      "@services/*": ["services/*"],
     },
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],

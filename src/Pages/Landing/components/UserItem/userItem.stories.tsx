@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { UserItem } from '.';
 import { User } from '@interfaces/user';
 
-const mockUser: User = {
+export const mockUser: User = {
   id: 1,
   login: 'John Doe',
   avatar_url: 'src/assets/logo.png',
