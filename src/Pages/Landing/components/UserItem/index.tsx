@@ -10,7 +10,6 @@ interface Props {
 
 export const UserItem = ({ user, triggerUserDetails }: Props) => {
   const [userImage, setUserImage] = useState<string>('');
-  console.log(user)
   useEffect(() => {
     setUserImage(triggerUserDetails ? user.avatar_url : 'src/assets/incognito.webp'); 
   }, [triggerUserDetails])

@@ -45,6 +45,7 @@ To get started with GitHub Explorer, follow these steps:
 - **[React Hook Form](https://react-hook-form.com/)**: Managing forms with easy-to-use hooks for validation.
 - **[FontAwesome](https://fontawesome.com/how-to-use/on-the-web/using-with/react)**: Library of icons for visual elements.
 - **[React Confetti](https://www.npmjs.com/package/react-confetti)**: Fun visual effect for celebrations or interactions.
+- **[Storybook](https://storybook.js.org/)**: Development environment for UI components to build, test, and document components in isolation.
 
 ### API Handling:
 - **[Axios](https://axios-http.com/)**: Making HTTP requests to interact with the GitHub API for fetching data.
