@@ -32,16 +32,10 @@ To get started with GitHub Explorer, follow these steps:
     ```bash
     pnpm install
     ```
-4. **Create a `.env.development` file in the root of the project:**
-    ```bash
-    echo "VITE_BASE_URL=https://api.github.com" > .env.development
-    ```
-5. **Run the development server:**
+4. **Run the development server:**
     ```bash
     pnpm dev
     ```
-
-*Observations: You may find an import error. IMPORTANT-> Go to src/router/AppRouter.tsx and change '../components/layout' and write '../components/Layout' with capital letter.*
 
 ## 💻 Technologies Used
 
