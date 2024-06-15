@@ -19,7 +19,7 @@ export const RepositoryContainer = ({ name }: Props) => {
   useEffect(() => {
     getLanguages(repositories, setLanguagesOfRepos);
     setRepositoriesShown(repositories);
-  }, [repositories]);
+  }, [repositories, repositoriesShown]);
 
   return (
     <>
