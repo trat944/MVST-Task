@@ -23,10 +23,12 @@ export const UserSpecificItem = ({ user }: Props) => {
         <span className="following">{user?.following} following</span>
       </div>
       <a className='github-link' href={user?.html_url}>Github Profile</a>
-      <div className="location-container">
+      {user?.location && (
+        <div className="location-container">
         <FontAwesomeIcon icon={faLocationDot} />
         <span>{user?.location}</span>
       </div>
+      )}
       </div>
   );
 };
