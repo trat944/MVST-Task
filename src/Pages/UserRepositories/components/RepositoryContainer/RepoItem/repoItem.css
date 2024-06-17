@@ -12,6 +12,7 @@
 
 .repo-specifics {
   display: flex;
+  width: 60%;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -51,6 +52,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 30%;
+  align-items: flex-end;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -59,10 +63,10 @@
   align-items: center;
   gap: 0.7rem;
   padding: 0.3rem 0.8rem;
+  width: fit-content;
   border-radius: 14px;
   background-color: rgb(59, 59, 59);
   color: rgb(198, 196, 196);
-  position: relative;
 }
 
 .star-container svg:last-child {
@@ -77,6 +81,13 @@
 
 @media (max-width: 650px) {
   .repo-item-container {
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .repo-specifics {
+    width: 100%;
+  }
+  .star-and-chart {
+    align-items: flex-start;
+    margin-bottom: 0;
   }
 }
