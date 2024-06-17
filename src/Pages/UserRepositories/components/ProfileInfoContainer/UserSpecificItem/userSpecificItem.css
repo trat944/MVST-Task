@@ -59,5 +59,7 @@
 @media (max-width: 900px) {
   .avatar-img {
     width: 60%;
+    max-width: 300px;
+    margin-top: 1rem;
   }
 }
