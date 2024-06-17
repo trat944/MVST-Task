@@ -2,7 +2,7 @@ import axios from "axios"
 import { User } from "../interfaces/user";
 import { UserSpecific } from "../interfaces/userSpecific";
 
-const  VITE_BASE_URL  = 'https://api.github.com'
+const  {VITE_BASE_URL}  = import.meta.env
 
 export class UserService {
   static async getUsers(): Promise<User[]> {

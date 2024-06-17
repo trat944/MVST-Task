@@ -30,7 +30,7 @@
   background-color: rgba(255, 255, 255, 0.2); 
   width: 80%;
   max-width: 1300px;
-  height: 600px;
+  height: calc(100vh - 8rem);
   border-radius: 20px;
   padding: 2rem;
   display: flex;
@@ -45,11 +45,4 @@
   scroll-snap-type: y mandatory; 
   scrollbar-width: thin;
   scrollbar-color: #091B29 #3a6687;
-}
-
-@media (max-width: 1224px) {
-  .app-background {
-    height: max-content;
-    padding: 2rem 0;
-  }
 }
