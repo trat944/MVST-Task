@@ -13,6 +13,7 @@ Upon landing on the homepage, users are greeted with a curated list of anonymous
 
 ## Watch the Videos
 
+- [App deployed in Vercel](https://mvst-task-jorgerevuelta-lwjtwa59d-jorges-projects-00dae3d7.vercel.app/)
 - [Click here to watch a demo](https://drive.google.com/file/d/13PSzdFXJ14IiBuW-C7zZA1ZeFDkDxRYW/view?usp=drive_link)
 - [Click here to watch an overview of the project's architecture](https://drive.google.com/file/d/14Sbyv2Ztf2crcJPT8H_2frHbPEA-YeS-/view?usp=drive_link)
 
@@ -32,10 +33,20 @@ To get started with GitHub Explorer, follow these steps:
     ```bash
     pnpm install
     ```
-4. **Run the development server:**
+4. **Create the .env.development file in your root directory:**
+    ```bash
+    touch .env.development
+    ```
+5. **Insert this environmental variable:**
+    ```
+    Key : VITE_BASE_URL
+    Value: https://api.github.com
+    ```
+6. **Run the development server:**
     ```bash
     pnpm dev
     ```
+
 
 ## 💻 Technologies Used
 
