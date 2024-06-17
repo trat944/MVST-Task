@@ -47,6 +47,13 @@
   margin-right: 0.3rem;
 }
 
+.star-and-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 .star-container {
   display: flex;
   align-items: center;
