@@ -47,7 +47,7 @@
   scrollbar-color: #091B29 #3a6687;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1224px) {
   .app-background {
     height: fit-content;
     padding: 2rem 0;
