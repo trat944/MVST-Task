@@ -1,5 +1,5 @@
 import { RepoItem } from '../RepoItem';
-import { Repository } from '@interfaces/repository';
+import { Repository } from '../../../../../interfaces/repository';
 import './repoList.css'
 
 interface Props {

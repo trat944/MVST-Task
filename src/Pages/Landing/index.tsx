@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Skeleton } from '@components/shared/Skeleton';
+import { Skeleton } from '../../components/shared/Skeleton';
 import { UserList } from './components/UserList';
 import { UnravelButton } from './components/UnravelButton';
 import { UserSearchbar } from './components/UserSearchbar';
-import { fetchAndSetUsers } from '@utils/fetchAndSetUsers';
-import { User } from '@interfaces/user';
+import { fetchAndSetUsers } from '../../utils/fetchAndSetUsers';
+import { User } from '../../interfaces/user';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 import './landingPage.css'

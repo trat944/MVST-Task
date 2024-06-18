@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User } from '@interfaces/user';
+import { User } from '../../../../interfaces/user';
 import './userItem.css'
 
 interface Props {

@@ -1,4 +1,4 @@
-import { UserSpecific } from '@interfaces/userSpecific';
+import { UserSpecific } from '../../../../../interfaces/userSpecific';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import './userSpecificItem.css'

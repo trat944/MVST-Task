@@ -12,7 +12,7 @@ export interface Repository {
   compare_url:                 string;
   contents_url:                string;
   contributors_url:            string;
-  created_at:                  Date;
+  created_at?:                  Date;
   default_branch:              string;
   deployments_url:             string;
   description:                 null;
@@ -58,7 +58,7 @@ export interface Repository {
   owner:                       Owner;
   private:                     boolean;
   pulls_url:                   string;
-  pushed_at:                   Date;
+  pushed_at?:                   Date;
   releases_url:                string;
   size:                        number;
   ssh_url:                     string;
@@ -72,7 +72,7 @@ export interface Repository {
   teams_url:                   string;
   topics:                      any[];
   trees_url:                   string;
-  updated_at:                  Date;
+  updated_at?:                  Date;
   url:                         string;
   visibility:                  string;
   watchers:                    number;

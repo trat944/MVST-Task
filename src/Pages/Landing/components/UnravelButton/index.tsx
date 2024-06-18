@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Confetti from 'react-confetti';
-import { handleUnravelButtonClick } from '@utils/handleUnravelButtonClick';
+import { handleUnravelButtonClick } from '../../../../utils/handleUnravelButtonClick';
 import './unravelButton.css'
 
 type Props = {

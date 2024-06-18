@@ -46,6 +46,11 @@ To get started with GitHub Explorer, follow these steps:
     ```bash
     pnpm dev
     ```
+6. **Run the tests:**
+    ```bash
+    pnpm test to watch in terminal
+    pnpm test:ui to watch in vitest web interface
+    ```
 
 
 ## 💻 Technologies Used

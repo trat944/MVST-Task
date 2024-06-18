@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Chart } from './Chart';
-import { formatDate } from '@utils/getFormattedTime';
-import { Repository } from '@interfaces/repository';
+import { formatDate } from '../../../../../utils/getFormattedTime';
+import { Repository } from '../../../../../interfaces/repository';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeFork, faSortDown, faStar } from '@fortawesome/free-solid-svg-icons';
 import './repoItem.css'

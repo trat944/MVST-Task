@@ -1,6 +1,6 @@
-import { Skeleton } from '@components/shared/Skeleton';
+import { Skeleton } from '../../../../components/shared/Skeleton';
 import { UserSpecificItem } from './UserSpecificItem';
-import { useUserSpecific } from '@hooks/useUserSpecific';
+import { useUserSpecific } from '../../../../hooks/useUserSpecific';
 import './profileInfoContainer.css'
 
 type Props = {
@@ -21,3 +21,5 @@ export const ProfileInfoContainer = ({name}: Props) => {
     </>
   )
 }
+
+export { UserSpecificItem };
