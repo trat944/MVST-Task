@@ -23,7 +23,7 @@ To get started with GitHub Explorer, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/MVST-Task.git
+    git clone git@github.com:trat944/MVST-Task.git
     ```
 2. **Navigate to the project directory:**
     ```bash
