@@ -8,19 +8,23 @@ Then we create a new Date (the actual one from the present) and we then check tw
  */
 
 export const formatDate = (originalUpdatedAtTime: Date) => {
-  const date = originalUpdatedAtTime;
-  const actualDate = new Date();
+  try {
+    const date = originalUpdatedAtTime;
+    const actualDate = new Date();
+    
+    if (isBefore(subMonths(actualDate, 1), date)) {
+      const timeAgo = formatDistanceToNow(date);
+      return 'Updated ' + timeAgo + ' ago';
+    }
   
-  if (isBefore(subMonths(actualDate, 1), date)) {
-    const timeAgo = formatDistanceToNow(date);
-    return 'Updated ' + timeAgo + ' ago';
+    if (isThisYear(date)) {
+      const formattedDate = format(date, 'MMM d');
+      return 'Updated on ' + formattedDate;
+    }
+  
+    const formattedDateYear = format(date, 'MMM d, yyyy');
+    return 'Updated on ' + formattedDateYear;
+  } catch (error) {
+    console.log(error, 'Failed to format date')
   }
-
-  if (isThisYear(date)) {
-    const formattedDate = format(date, 'MMM d');
-    return 'Updated on ' + formattedDate;
-  }
-
-  const formattedDateYear = format(date, 'MMM d, yyyy');
-  return 'Updated on ' + formattedDateYear;
 };

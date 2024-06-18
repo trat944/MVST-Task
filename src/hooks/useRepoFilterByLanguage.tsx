@@ -16,11 +16,15 @@ export const useRepoFilter = ({ repos }: UseRepoFilterProps) => {
   * @param {string} language - The selected programming language to filter by.
   */
  const filterRepos = (language: string) => {
-   let filtered = repos;
-   if (language !== 'All') {
-     filtered = filtered.filter(repo => repo.language === language);
+    try {
+      let filtered = repos;
+      if (language !== 'All') {
+        filtered = filtered.filter(repo => repo.language === language);
+       }
+       setFilteredRepos(filtered);
+    } catch (error) {
+      console.log(error, 'Failed to filter repos by language')
     }
-    setFilteredRepos(filtered);
   };
   
   /*

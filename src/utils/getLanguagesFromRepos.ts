@@ -9,11 +9,15 @@ export const getLanguages = (
   repositories: Repository[],
   setLanguagesOfRepos: React.Dispatch<React.SetStateAction<string[]>>
 ) => {
-  let languages: string[] = [];
-  repositories.forEach(repo => {
-    if (repo.language && !languages.includes(repo.language)) {
-      languages.push(repo.language);
-    }
-  });
-  setLanguagesOfRepos(languages)
+  try {
+    let languages: string[] = [];
+    repositories.forEach(repo => {
+      if (repo.language && !languages.includes(repo.language)) {
+        languages.push(repo.language);
+      }
+    });
+    setLanguagesOfRepos(languages)
+  } catch (error) {
+    console.log(error, 'Failed to select repository languages')
+  }
 }
